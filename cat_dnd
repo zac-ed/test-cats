@@ -1,7 +1,28 @@
 import random
 from time import sleep as z
 
-t = '~'
+
+# Fills any remaining space in line with tildes
+def printTildes(inputString, displayString):
+    
+    inputLength = len(inputString)
+    displayLength = len(displayString)-inputLength
+
+    print(f'{displayString}', end='')
+    
+    numChars = 38 - displayLength
+    mod = numChars-inputLength
+    if mod > 0:
+        tildeDisplay = mod*'~'
+        print(tildeDisplay)
+    else:
+        print("")
+
+def printDoubleLine():
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
 
 ## Splash Screen
 for i in range(1,8):
@@ -24,103 +45,58 @@ for i in range(1,8):
         print('~ \_____/  \_____/  \_____/  \_____/ ~')
         z(0.5)
     elif i == 7:
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        z(0.5)
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        z(0.5)
+        printDoubleLine()    
 
-# first fork in the conversation
-fork1 = random.randint(0,1)
-if fork1 == 0:
+# 1st fork in conversation
+fork = random.randint(0,1)
+if fork == 0:
     userInput = input('~~~~~~~~~~~~~~salutations! name?~~~~~~')
-    print(f'~~~~~{userInput}! what a nice name!', end = '')
-    mod = 14-len(userInput)
-    if mod < 0:
-        mod = 0
-        print(mod)
-    else:
-        mod = mod*t
-        print(mod)
-    z(1)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
+    displayString='~~~~~'+userInput+'! what a nice name!'
+
+    printTildes(userInput,displayString)
+    printDoubleLine()
+
 else:
     userInput = input('~~~~~~~~~~~~~~~~greetings! name?~~~~~~')
-    print(f'~it is great to meet you {userInput}!', end = '')
-    mod = 12-len(userInput)
-    if mod < 0:
-        mod = ''
-        print(mod)
-    else:
-        mod = mod*t
-        print(mod)
-    z(1)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
+    displayString='~it is great to meet you '+userInput+'!'
 
-fork2 = random.randint(0,1)
-if fork2 == 0:
+    printTildes(userInput,displayString)
+    printDoubleLine()
+
+# 2nd fork in conversation
+fork = random.randint(0,1)
+if fork == 0:
     userInput = input('~~~~~~~~choose a starting class:~~~~~~')
     z(2)
-    print(f'~~ah {userInput}. excellent choice.', end = '')
-    mod = 14-len(userInput)
-    if mod < 0:
-        mod = ''
-        print(mod)
-    else:
-        mod = mod*t
-        print(mod)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
+    displayString='~~ah'+userInput+'. excellent choice.'
+
+    printTildes(userInput,displayString)
+    printDoubleLine()
+
 else:
     print('~~~~~which class would you like?~~~~~~')
     z(1)
     userInput = input('~~~~~~~~~~~~~~~any class at all!~~~~~~')
     z(2)
-    print(f'{userInput}! i once was a {userInput} myself!', end = '')
-    mod = 11-len(userInput)
-    if mod < 0:
-        mod = ''
-        print(mod)
-    else:
-        mod = mod*t
-        print(mod)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
+    displayString=userInput+'! i once was a '+userInput+' myself!'
+
+    printTildes(userInput,displayString)
+    printDoubleLine()
+
+# 3rd fork in conversation
 fork = random.randint(0,1)
 if fork == 0:
     userInput = input('~~~~~~~~~~~~how are you aligned?~~~~~~')
     z(2)
-    print(f'{userInput} is it? a wise choice indeed', end = '')
-    mod = 10-len(userInput)
-    if mod < 0:
-        mod = ''
-        print(mod)
-    else:
-        mod = mod*t
-        print(mod)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    displayString= userInput+' is it? a wise choice indeed'
+    
+    printTildes(userInput,displayString)
+    printDoubleLine()
+
 else:
     userInput = input('~~~~~~~~~~~~~and your alignment?~~~~~~')
     z(2)
-    print(f'~~~~{userInput}? yes, i can see that...', end = '')
-    mod = 10-len(userInput)
-    if mod < 0:
-        mod = ''
-        print(mod)
-    else:
-        mod = mod*t
-        print(mod)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    z(0.5)
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    displayString='~~~~'+userInput+'? yes, i can see that...'
+
+    printTildes(userInput,displayString)
+    printDoubleLine()
