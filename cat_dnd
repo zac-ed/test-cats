@@ -1,0 +1,124 @@
+import random
+from time import sleep as z
+
+t = '~'
+
+for i in range(1,8):
+    if i == 1:
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        z(0.5)
+    elif i == 2:
+        print('~~ ^- -^ ~~ ^- -^ ~~ ^- -^ ~~ ^- -^ ~~')
+        z(0.5)
+    elif i == 3:
+        print('~ /o w o\  /o w o\  /o w o\  /o w o\ ~')
+        z(0.5)
+    elif i == 4:
+        print('~| HI!   WELCOME  TO  SCII  STEEPE! |~')
+        z(0.5)
+    elif i == 5:
+        print('~| U   U || U   U || U   U || U   U |~')
+        z(0.5)
+    elif i == 6:
+        print('~ \_____/  \_____/  \_____/  \_____/ ~')
+        z(0.5)
+    elif i == 7:
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        z(0.5)
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        z(0.5)
+
+fork1 = random.randint(0,1)
+if fork1 == 0:
+    u1 = str(input('~~~~~~~~~~~~~~salutations! name?~~~~~~'))
+    print(f'~~~~~{u1}! what a nice name!', end = '')
+    mod = 14-len(u1)
+    if mod < 0:
+        mod = ''
+        print(mod)
+    else:
+        mod = mod*t
+        print(mod)
+    z(1)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+else:
+    u1 = str(input('~~~~~~~~~~~~~~~~greetings! name?~~~~~~'))
+    print(f'~it is great to meet you {u1}!', end = '')
+    mod = 12-len(u1)
+    if mod < 0:
+        mod = ''
+        print(mod)
+    else:
+        mod = mod*t
+        print(mod)
+    z(1)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+
+fork2 = random.randint(0,1)
+if fork2 == 0:
+    u1 = str(input('~~~~~~~~choose a starting class:~~~~~~'))
+    z(2)
+    print(f'~~ah {u1}. excellent choice.', end = '')
+    mod = 14-len(u1)
+    if mod < 0:
+        mod = ''
+        print(mod)
+    else:
+        mod = mod*t
+        print(mod)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+else:
+    print('~~~~~which class would you like?~~~~~~')
+    z(1)
+    u1 = str(input('~~~~~~~~~~~~~~~any class at all!~~~~~~'))
+    z(2)
+    print(f'{u1}! i once was a {u1} myself!', end = '')
+    mod = 11-len(u1)
+    if mod < 0:
+        mod = ''
+        print(mod)
+    else:
+        mod = mod*t
+        print(mod)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+fork = random.randint(0,1)
+if fork == 0:
+    u1 = str(input('~~~~~~~~~~~~how are you aligned?~~~~~~'))
+    z(2)
+    print(f'{u1} is it? a wise choice indeed', end = '')
+    mod = 10-len(u1)
+    if mod < 0:
+        mod = ''
+        print(mod)
+    else:
+        mod = mod*t
+        print(mod)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+else:
+    u1 = str(input('~~~~~~~~~~~~~and your alignment?~~~~~~'))
+    z(2)
+    print(f'~~~~{u1}? yes, i can see that...', end = '')
+    mod = 10-len(u1)
+    if mod < 0:
+        mod = ''
+        print(mod)
+    else:
+        mod = mod*t
+        print(mod)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    z(0.5)
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
