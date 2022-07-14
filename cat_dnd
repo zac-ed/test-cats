@@ -3,6 +3,7 @@ from time import sleep as z
 
 t = '~'
 
+## Splash Screen
 for i in range(1,8):
     if i == 1:
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
@@ -28,13 +29,14 @@ for i in range(1,8):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         z(0.5)
 
+# first fork in the conversation
 fork1 = random.randint(0,1)
 if fork1 == 0:
-    u1 = str(input('~~~~~~~~~~~~~~salutations! name?~~~~~~'))
-    print(f'~~~~~{u1}! what a nice name!', end = '')
-    mod = 14-len(u1)
+    userInput = input('~~~~~~~~~~~~~~salutations! name?~~~~~~')
+    print(f'~~~~~{userInput}! what a nice name!', end = '')
+    mod = 14-len(userInput)
     if mod < 0:
-        mod = ''
+        mod = 0
         print(mod)
     else:
         mod = mod*t
@@ -45,9 +47,9 @@ if fork1 == 0:
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     z(0.5)
 else:
-    u1 = str(input('~~~~~~~~~~~~~~~~greetings! name?~~~~~~'))
-    print(f'~it is great to meet you {u1}!', end = '')
-    mod = 12-len(u1)
+    userInput = input('~~~~~~~~~~~~~~~~greetings! name?~~~~~~')
+    print(f'~it is great to meet you {userInput}!', end = '')
+    mod = 12-len(userInput)
     if mod < 0:
         mod = ''
         print(mod)
@@ -62,10 +64,10 @@ else:
 
 fork2 = random.randint(0,1)
 if fork2 == 0:
-    u1 = str(input('~~~~~~~~choose a starting class:~~~~~~'))
+    userInput = input('~~~~~~~~choose a starting class:~~~~~~')
     z(2)
-    print(f'~~ah {u1}. excellent choice.', end = '')
-    mod = 14-len(u1)
+    print(f'~~ah {userInput}. excellent choice.', end = '')
+    mod = 14-len(userInput)
     if mod < 0:
         mod = ''
         print(mod)
@@ -79,10 +81,10 @@ if fork2 == 0:
 else:
     print('~~~~~which class would you like?~~~~~~')
     z(1)
-    u1 = str(input('~~~~~~~~~~~~~~~any class at all!~~~~~~'))
+    userInput = input('~~~~~~~~~~~~~~~any class at all!~~~~~~')
     z(2)
-    print(f'{u1}! i once was a {u1} myself!', end = '')
-    mod = 11-len(u1)
+    print(f'{userInput}! i once was a {userInput} myself!', end = '')
+    mod = 11-len(userInput)
     if mod < 0:
         mod = ''
         print(mod)
@@ -95,10 +97,10 @@ else:
     z(0.5)
 fork = random.randint(0,1)
 if fork == 0:
-    u1 = str(input('~~~~~~~~~~~~how are you aligned?~~~~~~'))
+    userInput = input('~~~~~~~~~~~~how are you aligned?~~~~~~')
     z(2)
-    print(f'{u1} is it? a wise choice indeed', end = '')
-    mod = 10-len(u1)
+    print(f'{userInput} is it? a wise choice indeed', end = '')
+    mod = 10-len(userInput)
     if mod < 0:
         mod = ''
         print(mod)
@@ -109,10 +111,10 @@ if fork == 0:
     z(0.5)
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 else:
-    u1 = str(input('~~~~~~~~~~~~~and your alignment?~~~~~~'))
+    userInput = input('~~~~~~~~~~~~~and your alignment?~~~~~~')
     z(2)
-    print(f'~~~~{u1}? yes, i can see that...', end = '')
-    mod = 10-len(u1)
+    print(f'~~~~{userInput}? yes, i can see that...', end = '')
+    mod = 10-len(userInput)
     if mod < 0:
         mod = ''
         print(mod)
